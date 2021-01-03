@@ -23,8 +23,8 @@ export default function Gallery() {
                     <SideDrawer/>
                 </Box>
 
-                <Box bgColor={bgColor[colorMode]} color={color[colorMode]} w={windowSize.width * .95} alignContent="center" m="36px">
-                    <SimpleGrid columns={2} spacing={10} p="36px">
+                <Box bgColor={bgColor[colorMode]} color={color[colorMode]} w={windowSize.width * .90} alignContent="center" my='32px' mx='auto'>
+                    <SimpleGrid columns={2} spacing={10} p="24px">
                         <Box mx="auto" bg="white" height={cardHeight} width={cardWidth}/>
                         <Box mx="auto" bg="white" height={cardHeight} width={cardWidth}/>
                         <Box mx="auto" bg="white" height={cardHeight} width={cardWidth}/>
