@@ -1,12 +1,12 @@
-import {Box, Text, HStack} from '@chakra-ui/react';
+import {Box, Link, HStack} from '@chakra-ui/react';
 
 export const NavLogo = (props) => {
     return (
         <Box {...props}>
             <HStack>
-                <Text pl="24px" style={{fontFamily: 'Redressed', fontSize: 48}}>
+                <Link pl="24px" style={{fontFamily: 'Redressed', fontSize: 48, textDecoration: 'none'}} href="/">
                     Arbovitae
-                </Text>
+                </Link>
             </HStack>
         </Box>
     )
