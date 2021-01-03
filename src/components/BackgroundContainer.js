@@ -8,7 +8,6 @@ export const BackgroundContainer = (props) => {
     return (
         <Flex
             direction="column"
-            alignItems="center"
             justifyContent="flex-start"
             bg={bgColor[colorMode]}
             color={color[colorMode]}

@@ -28,7 +28,7 @@ export const SideDrawer = () => {
     const color = {light: 'black', dark: 'white'};
 
     const profileCard = <ProfileCard userData={auth?.user}/>
-    const interactionMenu = <InteractionMenu/>
+    const interactionMenu = <InteractionMenu sideNavClose={onClose}/>
     const messageCard = <MessageCard/>
 
     const drawerContents = [profileCard, interactionMenu, messageCard];

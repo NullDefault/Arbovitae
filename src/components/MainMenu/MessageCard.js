@@ -5,7 +5,7 @@ export const MessageCard = () => {
     return(
         <BackgroundContainer w="100%" style={{borderRadius: "24px"}}>
             <VStack spacing="24px">
-                <Text>
+                <Text p="12px">
                     Messages
                 </Text>
             </VStack>

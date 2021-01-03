@@ -1,8 +1,8 @@
 import {Box, Center} from "@chakra-ui/react";
-import {TopNavigation} from "../components/TopNavigation/TopNavigation";
 import {BackgroundContainer} from "../components/BackgroundContainer";
-import {Footer} from "../components/Footer/Footer";
 import {SideDrawer} from "../components/MainMenu/SideDrawer";
+import {TopNavigation} from "../components/TopNavigation/TopNavigation";
+import {Footer} from "../components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -10,7 +10,10 @@ export default function Home() {
         <TopNavigation/>
         <BackgroundContainer>
             <Box h={"1000px"}>
-                <SideDrawer/>
+                <Center>
+                    <SideDrawer/>
+                </Center>
+
             </Box>
         </BackgroundContainer>
         <Footer>

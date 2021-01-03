@@ -12,7 +12,7 @@ function MyApp({Component, pageProps}) {
                 }}
             >
                 <CSSReset/>
-                <Component {...pageProps} />
+                <Component {...pageProps}/>
             </ColorModeProvider>
         </ProvideAuth>
     </ChakraProvider>

@@ -6,7 +6,7 @@ export const ProfileCard = ({userData}) => {
     return(
         <BackgroundContainer w="100%" style={{borderRadius: "24px"}}>
             <Avatar p="12px" m="24px" src={userData?.photoURL} size={["md", "lg", "xl"]}/>
-            <Center p="12px">{userData?.displayName}</Center>
+            <Center p="24px">{userData?.displayName}</Center>
         </BackgroundContainer>
     )
 }
