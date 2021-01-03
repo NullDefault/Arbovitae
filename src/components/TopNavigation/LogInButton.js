@@ -6,33 +6,24 @@ export const LogInButton = () => {
     const {colorMode} = useColorMode();
     const auth = useAuth();
 
-    const bgColor = { light: 'green.200', dark: 'green.800' };
-    const color = { light: 'black', dark: 'white' };
+    const bgColor = {light: 'green.200', dark: 'green.800'};
+    const color = {light: 'black', dark: 'white'};
 
     const icon = !auth?.user ? <FaRegUser/> : <FaRegUserCircle/>;
-    if(!auth?.user){
-        return (
-            <IconButton
-                aria-label="Log In / Out"
-                icon={icon}
-                bg={bgColor[colorMode]}
-                color={color[colorMode]}
-                size="lg"
-                onClick={()=>{auth.signInWithGithub()}}
-            />
-        )
-    }else{
-        return (
-            <IconButton
-                aria-label="Log In / Out"
-                icon={icon}
-                bg={bgColor[colorMode]}
-                color={color[colorMode]}
-                size="lg"
-                onClick={()=>{auth.signOut()}}
-            />
-        )
-    }
+    return (
+        <IconButton
+            aria-label="Log In / Out"
+            icon={icon}
+            bg={bgColor[colorMode]}
+            color={color[colorMode]}
+            size="lg"
+            onClick={!auth?.user ? () => {
+                auth.signInWithGithub()
+            } : () => {
+                auth.signOut()
+            }}
+        />
+    )
 
 
 }
