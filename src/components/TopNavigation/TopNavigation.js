@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {HStack, VStack, useBreakpointValue} from "@chakra-ui/react";
+import {HStack, VStack, Box, useBreakpointValue} from "@chakra-ui/react";
 import {NavLogo} from "./NavLogo";
 import {NavContainer} from "./NavContainer";
 import {MenuToggle} from "./MenuToggle";
@@ -8,6 +8,7 @@ import {ColorModeSwitch} from "./ColorModeSwitch";
 import {GitHubButton} from "./GitHubButton";
 import {LogInButton} from "./LogInButton";
 import {MenuItem} from "./MenuItem";
+import {SideDrawer} from "../MainMenu/SideDrawer";
 
 export const TopNavigation = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,8 @@ export const TopNavigation = (props) => {
         {colorModeSwitch}{gitHubButton}{logInButton}
     </HStack>
 
-    const forumLink = <MenuItem to="/forum">Forum</MenuItem>
-    const frontPageLink = <MenuItem to="/wall">Front Page</MenuItem>
+    const forumLink = <MenuItem to="/forum" style={{fontSize: 24}}>Forum</MenuItem>
+    const frontPageLink = <MenuItem to="/wall" style={{fontSize: 24}}>Front Page</MenuItem>
 
     const links = useBreakpointValue({base: <VStack>{forumLink}{frontPageLink}</VStack>,
                                              md: <HStack>{forumLink}{frontPageLink}</HStack>});
@@ -34,7 +35,8 @@ export const TopNavigation = (props) => {
 
     return (
         <NavContainer {...props}>
-            <NavLogo h="100px"/>
+            <SideDrawer/>
+            <NavLogo/>
             <MenuToggle toggle={toggle} isOpen={isOpen}/>
             <MenuLinks isOpen={isOpen} children={navChildren}/>
         </NavContainer>

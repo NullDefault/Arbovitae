@@ -1,4 +1,4 @@
-import {Box, Center, useColorMode, SimpleGrid} from "@chakra-ui/react";
+import {Box, useColorMode, SimpleGrid} from "@chakra-ui/react";
 import {BackgroundContainer} from "../components/BackgroundContainer";
 import {Footer} from "../components/Footer/Footer";
 import {TopNavigation} from "../components/TopNavigation/TopNavigation";
@@ -29,23 +29,15 @@ export default function Gallery() {
         <Box>
             <TopNavigation/>
             <BackgroundContainer>
-                <Box ml="36px">
-                    <SideDrawer/>
-                </Box>
-
                 <Box bgColor={bgColor[colorMode]} color={color[colorMode]} w={windowSize.width * .90}
-                     alignContent="center" my='32px' mx='auto' style={{borderRadius: "24px"}}>
+                     my='32px' mx='auto' style={{borderRadius: "24px"}}>
                     <SimpleGrid columns={2} spacing={10} p="24px">
                         {projects.map((item, i) =>
                             <PlanetCard cardWidth={cardWidth} cardHeight={cardHeight}  key={i} bgColor={cardBgColor[colorMode]} item={item}/>)}
                     </SimpleGrid>
                 </Box>
             </BackgroundContainer>
-            <Footer>
-                <Center mx="auto">
-                    Arbovitae 2021
-                </Center>
-            </Footer>
+            <Footer/>
         </Box>
     )
 }

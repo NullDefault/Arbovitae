@@ -9,7 +9,7 @@ import {
     DrawerHeader,
     DrawerBody,
     DrawerFooter,
-    useColorMode
+    useColorMode, IconButton
 } from "@chakra-ui/react";
 import {useRef} from 'react';
 import {FaHome} from 'react-icons/fa';
@@ -33,12 +33,10 @@ export const SideDrawer = () => {
 
     const drawerContents = [profileCard, interactionMenu, messageCard];
 
-
     return (
         <>
-            <Button ref={btnRef} onClick={onOpen} leftIcon={<FaHome/>}>
-                Main Menu
-            </Button>
+            <IconButton ref={btnRef} onClick={onOpen} icon={<FaHome/>} size="lg">
+            </IconButton>
             <Drawer
                 isOpen={isOpen}
                 placement="left"
