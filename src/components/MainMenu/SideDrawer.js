@@ -24,7 +24,7 @@ export const SideDrawer = () => {
     const btnRef = useRef();
 
     const {colorMode} = useColorMode();
-    const bgColor = {light: 'gray.400', dark: 'gray.800'};
+    const bgColor = {light: 'gray.500', dark: 'gray.800'};
     const color = {light: 'black', dark: 'white'};
 
     const profileCard = <ProfileCard userData={auth?.user}/>

@@ -4,6 +4,7 @@ import {Footer} from "../components/Footer/Footer";
 import {TopNavigation} from "../components/TopNavigation/TopNavigation";
 import {useWindowSize} from "../lib/windowSize";
 import {SideDrawer} from "../components/MainMenu/SideDrawer";
+import {PlanetCard} from "../components/Gallery/PlanetCard";
 
 export default function Gallery() {
     const {colorMode} = useColorMode();
@@ -36,13 +37,7 @@ export default function Gallery() {
                      alignContent="center" my='32px' mx='auto' style={{borderRadius: "24px"}}>
                     <SimpleGrid columns={2} spacing={10} p="24px">
                         {projects.map((item, i) =>
-                            <Box key={i} w={cardWidth} h={cardHeight} bgColor={cardBgColor[colorMode]}
-                                 style={{borderRadius: "24px"}}>
-                                <Center>
-                                    name: {item.name} species: {item.species}
-                                </Center>
-                            </Box>)
-                        }
+                            <PlanetCard cardWidth={cardWidth} cardHeight={cardHeight}  key={i} bgColor={cardBgColor[colorMode]} item={item}/>)}
                     </SimpleGrid>
                 </Box>
             </BackgroundContainer>

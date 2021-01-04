@@ -18,13 +18,12 @@ export const InteractionMenu = ({sideNavClose}) => {
                 </Button>
                 <Menu>
                     <MenuButton as={Button} rightIcon={<MdCreate/>}  w="100%">
-                        Create
+                        Create New
                     </MenuButton>
                     <MenuList mt="-24px">
-                        <MenuItem>New Autotroph</MenuItem>
-                        <MenuItem>New Heterotroph</MenuItem>
-                        <MenuItem>New Species Branch</MenuItem>
-                        <MenuItem>New Environment</MenuItem>
+                        <MenuItem>Species</MenuItem>
+                        <MenuItem>Eco System</MenuItem>
+                        <MenuItem>Planet</MenuItem>
                     </MenuList>
                 </Menu>
                 <Button mb="12px" rightIcon={<MdSchool/>} w="100%">
