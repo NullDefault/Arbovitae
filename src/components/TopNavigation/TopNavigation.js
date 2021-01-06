@@ -26,7 +26,7 @@ export const TopNavigation = (props) => {
     const frontPageLink = <MenuItem to="/wall" style={{fontSize: 24}}>Front Page</MenuItem>
 
     const links = useBreakpointValue({base: <VStack>{forumLink}{frontPageLink}</VStack>,
-                                             md: <HStack>{forumLink}{frontPageLink}</HStack>});
+                                             md: <HStack>{forumLink}<Box w="12px"/>{frontPageLink}</HStack>});
 
     const a = [buttons, links]
     const b = [links, buttons]
